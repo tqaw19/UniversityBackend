@@ -1,5 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using University.DataAccess;
+using University.Controllers;
+using University.Services;
+using Microsoft.AspNetCore.Cors.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,9 +17,26 @@ builder.Services.AddDbContext<UniveristyDBContext>(options => options.UseSqlServ
 // Add services to the container.
 
 builder.Services.AddControllers();
+
+// Add Custom Services (folder Services)
+builder.Services.AddScoped<IStudentService, StudentService>();
+// TODO: Add the rest of services
+
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+// CORS Configuration
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: "CorsPolicy", builder =>
+    {
+        builder.AllowAnyOrigin();
+        builder.AllowAnyMethod();
+        builder.AllowAnyHeader();
+    });
+});
 
 var app = builder.Build();
 
@@ -32,5 +52,8 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+// Tell app to use CORS
+app.UseCors("CorsPolicy");
 
 app.Run();
