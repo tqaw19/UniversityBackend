@@ -5,7 +5,9 @@ VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "University", "University.csproj", "{AD73DE51-8B80-4D94-B22C-88BBB99D266E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqSnippets", "..\LinqSnippets\LinqSnippets.csproj", "{8711588A-C56D-42FB-8DEE-7B1C49B79E0A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinqSnippets", "..\LinqSnippets\LinqSnippets.csproj", "{8711588A-C56D-42FB-8DEE-7B1C49B79E0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SomeLibraryToStage", "..\SomeLibraryToStage\SomeLibraryToStage.csproj", "{EDC781E7-1F40-4638-923B-F144D3E8D960}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{8711588A-C56D-42FB-8DEE-7B1C49B79E0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8711588A-C56D-42FB-8DEE-7B1C49B79E0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8711588A-C56D-42FB-8DEE-7B1C49B79E0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDC781E7-1F40-4638-923B-F144D3E8D960}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDC781E7-1F40-4638-923B-F144D3E8D960}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDC781E7-1F40-4638-923B-F144D3E8D960}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDC781E7-1F40-4638-923B-F144D3E8D960}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
