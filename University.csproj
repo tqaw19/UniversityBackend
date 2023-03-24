@@ -22,7 +22,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\LinqSnippets\LinqSnippets.csproj" />
-    <ProjectReference Include="..\SomeLibraryToStage\SomeLibraryToStage.csproj" />
   </ItemGroup>
 
 </Project>
