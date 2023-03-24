@@ -6,5 +6,6 @@ namespace University.Services
     {
         IEnumerable<Student> GetStudentsWithCourses();
         IEnumerable<Student> GetStudentsWithNoCourses();
+        IEnumerable<Student> GetCoursesFromStudent();
     }
 }
