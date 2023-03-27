@@ -6,6 +6,10 @@ using Microsoft.AspNetCore.Cors.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Add service of JWT authtorization
+// TODO:
+//builder.Services.AddJwtTokenServices(builder.Configuration);
+
 // TODO: Connection with SQL Server Express
 const string CONNECTIONNAME = "UniversityDB";
 var connectionString = builder.Configuration.GetConnectionString(CONNECTIONNAME);
@@ -25,6 +29,8 @@ builder.Services.AddScoped<IStudentService, StudentService>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
+
+// TODO: Config Swagger to take care of Authorization of JWT
 builder.Services.AddSwaggerGen();
 
 // CORS Configuration
